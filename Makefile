@@ -39,8 +39,8 @@ lint:
 	export GO111MODULE=on
 	go get github.com/golangci/golangci-lint/cmd/golangci-lint
 	export GOPATH=/tmp/gopath
-    export PATH=$GOPATH/bin:$PATH
-    golangci-lint --new-from-rev=HEAD~1 -v run ./...
+	export PATH=$GOPATH/bin:$PATH
+	golangci-lint run ./...
 
 clean:
 	rm -rf .build node_modules
